@@ -1,4 +1,4 @@
-#include<stdio.h>
+23#include<stdio.h>
 int sum (int *a, int *b);
 int main()
 {
@@ -9,6 +9,6 @@ int main()
   printf("Sum is %d + %d is %d",a,b,res);
 }
 int sum (int *a, int *b)
-{
+{     
   return *a + *b;
 }
