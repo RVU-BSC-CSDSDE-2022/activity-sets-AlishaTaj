@@ -17,6 +17,5 @@ void scalene(int side1,int side2,int side3){
     printf("The given triangle is not scalene :(");
     }
   else{
-    printf("The given triangle is  scalen :)");
-  }
+    printf("The given triangle is  scalene :(");}
 }
