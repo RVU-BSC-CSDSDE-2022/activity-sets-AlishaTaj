@@ -1,65 +1,59 @@
 #include<stdio.h>
-struct complex {
-	int real,img;
+struct _complex {
+	float real,imaginary;
 };
-typedef struct complex Complex;
+typedef struct _complex Complex;
 
-int get_n();
-Complex input_complex();
+int get_n(); // gets size of array
+Complex input_complex(); // takes input for one complex no.
 void input_n_complex(int n, Complex c[n]);
 Complex add(Complex a, Complex b);
 Complex add_n_complex(int n, Complex c[n]);
 void output(int n, Complex c[n], Complex result);
-
 int main(){
-  int n = get_n();
-  Complex c[n],result;
-  input_n_complex(n,c);
-  result = add_n_complex(n,c);
-  output(n,c,result);
+  int n;
+  Complex result={0,0};
+  n=get_n();
+  Complex c[n];
+  input_n_complex(n, c);
+  result = add_n_complex(n, c);
+  output(n, c, result);
+  
 }
-
 int get_n(){
-  int a;
-  printf("Enter a number.\n");
-  scanf("%d", &a);
-  return(a);
+  int n;
+  printf("Enter size of the array: ");
+  if(scanf("%d", &n));
+  return n;
 }
-
 Complex input_complex(){
-  Complex a;
-  printf("Enter a and b where a + ib is the first complex number.\n");
-   scanf("%d%d", &a.real, &a.img);
-  return(a);
+  Complex c;
+  printf("Enter the real part: ");
+  if(scanf("%f", &c.real));
+  printf("Enter the imaginary part: ");
+  if(scanf("%f", &c.imaginary));
+  return c;
 }
-
 void input_n_complex(int n, Complex c[n]){
-  int i;
-  for(i = 0;i<n;i++){
+  for(int i = 0; i<n; i++){
     c[i] = input_complex();
   }
 }
-
 Complex add(Complex a, Complex b){
   Complex sum;
-  sum.real = a.real+b.real;
-  sum.img = a.img+b.img;
-  return(sum);
+  sum.real = a.real + b.real;
+  sum.imaginary = a.imaginary + b.imaginary;
+  return sum;
 }
-
 Complex add_n_complex(int n, Complex c[n]){
-  int i;
-  Complex sum = {0,0};
-  for(i = 0;i<n;i++){
-    sum = add(sum,c[i]);
+  Complex result = {0, 0};
+  for (int i = 0; i<n; i++){
+    result = add(result, c[i]);
   }
+  return result;  
 }
-
 void output(int n, Complex c[n], Complex result){
-  int i;
-  for(i = 0;i<n-1;i++){
-    printf("%d+%di + ",c[i].real,c[i].img);
-  }
-  printf("%d+%di ",c[n-1].real,c[n-1].img);
-  printf("is %d+%di",result.real,result.img);
+  for (int i = 0; i<n; i++){
+    printf("%d+%di + ",(int)c[i].real, (int)c[i].imaginary);}
+    printf("is %d+%di\n",(int)result.real, (int) result.imaginary);
 }
