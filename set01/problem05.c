@@ -1,10 +1,10 @@
-#include<stdio.h>
+#include <stdio.h>
 int input();
-int compare(int a, int b, int c);
+int comapare(int a, int b, int c);
 void output(int a, int b, int c, int largest);
 int main(){
   int a, b, c, largest;
-  printf("Enter three no's : ");
+  printf ("Enter the three no's :");
   a = input();
   b = input();
   c = input();
