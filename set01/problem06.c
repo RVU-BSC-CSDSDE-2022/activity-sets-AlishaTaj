@@ -8,7 +8,7 @@ int main(){
   a = input();
   b = input();
   c = input();
-  compare(a, b, c, &largest);
+  compare(a,b, c, &largest);
   output(a, b, c, largest);
   }
 int input(){
@@ -42,5 +42,5 @@ void output(int a, int b, int c, int largest){
     }
   else
     printf("sorry, wrong input try again.\n");
-    }
   }
+}
