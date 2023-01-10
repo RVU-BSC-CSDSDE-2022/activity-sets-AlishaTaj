@@ -1,11 +1,11 @@
-#include<stdio.h>
+ #include<stdio.h>
 struct _complex {
 	float real,imaginary;
 };
 typedef struct _complex Complex;
 
-int get_n(); // gets size of array
-Complex input_complex(); // takes input for one complex no.
+int get_n();
+Complex input_complex(); .
 void input_n_complex(int n, Complex c[n]);
 Complex add(Complex a, Complex b);
 Complex add_n_complex(int n, Complex c[n]);
