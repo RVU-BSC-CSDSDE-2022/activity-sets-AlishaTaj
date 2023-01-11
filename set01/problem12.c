@@ -1,5 +1,5 @@
- #include<stdio.h>
-struct _complex {
+#include <stdio.h>
+struct_complex {
 	float real,imaginary;
 };
 typedef struct _complex Complex;
