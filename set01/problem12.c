@@ -1,4 +1,4 @@
-#include <stdio.h>
+include <stdio.h>
 struct_complex {
 	float real,imaginary;
 };
@@ -18,8 +18,7 @@ int main(){
   input_n_complex(n, c);
   result = add_n_complex(n, c);
   output(n, c, result);
-  
-}
+  }
 int get_n(){
   int n;
   printf("Enter size of the array: ");
