@@ -35,5 +35,5 @@ Comp add_complex(Comp a, Comp b)
   }
 void output(Comp a, Comp b, Comp sum)
 {
-  printf("The sum of %f+%fi and %f+%fi is %f+%fi\n", a.real, a.imaginary, b.real, b.imaginary, sum.real, sum.imaginary);
-  }
+  printf("The sum of %f+%fi is %f+%fi\n", a.real, a.imaginary, b.real, b.imaginary)
+    }
