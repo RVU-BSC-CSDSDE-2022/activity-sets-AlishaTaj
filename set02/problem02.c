@@ -1,21 +1,38 @@
-#include <stdio.h>
-
-void scalene(int side1,int side2,int side3);
-
+#include<stdio.h>
+int input_side();
+int check_scalene(int a, int b, int c);
+void output(int a, int b, int c, int isscalene);
+int input_side()
+{
+  int n;
+  printf("enter the number:");
+  scanf("%d",&n);
+  return n;
+} 
+int check_scalene(int a, int b, int c)
+{
+  int isscalene;
+  if(a!=b && b!=c)
+  {
+    printf("scalene triangle\n");
+  }
+  else{
+    printf("is not a scalene\n");
+  }
+  return isscalene;
+}
+void output(int a, int b, int c, int isscalene)
+{
+  printf("the given of %d %d and %d is %d",a,b,c,isscalene);
+}
 int main()
 {
-  int side1,side2,side3;
-  printf("Enter the side :");
-  scanf("%d%d%d",&side1,&side2,&side3);
-  
-
-  scalene(side1,side2,side3);
-}
-
-void scalene(int side1,int side2,int side3){
-  if (side1==side2 || side2==side3 || side3==side1){
-    printf("The given triangle is not scalene :(");
-    }
-  else{
-    printf("The given triangle is  scalene :(");}
+  int a,b,c;
+  a=input_side();
+  b=input_side();
+  c=input_side();
+  int isscalene;
+  isscalene=check_scalene(a,b,c);
+  output(a,b,c,isscalene);
+  return(0);
 }
