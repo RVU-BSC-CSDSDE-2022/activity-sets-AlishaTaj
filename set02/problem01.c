@@ -21,5 +21,5 @@ int main()
   input(&base, &height);
   find_area(base, height,&area);
   output(base,height,area);
-  return(0);
-}
+  return 0;
+ }
