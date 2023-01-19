@@ -8,7 +8,7 @@ int main(){
   result = is_composite(n);
   output(n, result);
   return 0;
-}
+  }
 int input_number(){
   int n;
   printf("Enter a number: ");
@@ -30,7 +30,6 @@ void output(int n, int result){
     printf("%d is a composite number", n);} 
   if(result == 0){
     printf("%d is not a composite number", n);}
-}
-
+  }
 
 
