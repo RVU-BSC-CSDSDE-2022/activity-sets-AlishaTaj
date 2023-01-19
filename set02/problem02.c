@@ -36,3 +36,4 @@ int main()
   output(a,b,c,isscalene);
   return 0;
   }
+  
