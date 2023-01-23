@@ -34,4 +34,4 @@ c = input();
 compare(a,b,c,&largest);
 output(a,b,c,largest);
 return 0;
-}
+  }
