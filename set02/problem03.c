@@ -32,4 +32,3 @@ void output(int n, int result){
     printf("%d is not a composite number", n);}
   }
 
-
